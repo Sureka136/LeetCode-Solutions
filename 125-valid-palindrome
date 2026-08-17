@@ -1,0 +1,27 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+        String a;
+        s=s.toLowerCase();
+        s=s.replaceAll("[^a-z0-9]","");
+        int n=s.length();
+        int count=0;
+        StringBuilder sb=new StringBuilder(s);
+        sb.reverse();
+        a=sb.toString();
+        for(int i=0;i<n;i++)
+        {
+            if(s.charAt(i)==a.charAt(i))
+        {
+            count++;
+        }
+        }
+        if(count==n)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
